@@ -1,17 +1,18 @@
 const express = require('express');
 const http = require('http');
-const app = express();
-const server = http.createServer(app);
 
 import {Server} from 'socket.io'
 import { DrawLine } from './types/types'
-
+// Create the Express server setup with socket.io communication
+const app = express();
+const server = http.createServer(app);
+const PORT: number = parseInt(process.env.PORT || '3001', 10);
 // Create new http server instance
 const io = new Server(
     server,
     {
         cors: {
-            origin: '*',
+            origin: '*', //change this to hosted domain
         },
     }
 );
@@ -38,6 +39,6 @@ io.on('connection', (socket) => {
     socket.on('clear', () => io.emit('clear'));
 })
 
-server.listen(3001, () => {
-    console.log('Server listening on port 3001')
+server.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`)
 })

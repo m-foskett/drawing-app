@@ -7,7 +7,7 @@ import { io } from "socket.io-client"
 import { drawLine } from '../../utils/drawLine';
 import NextImage from 'next/image' ;
 
-const socket = io('http://localhost:3001');
+const socket = io('http://localhost:3001'); // change to hosted domain
 
 export default function Home() {
   // State Variables
