@@ -15,7 +15,7 @@
  <img align="center" alt="Sign In Page"  width="1200" src="/public/signIn_screenshot.PNG">
 </div> -->
 
-## :books: Tech-Stack
+<!-- ## :books: Tech-Stack
 Below is a non-exhaustive list of the technologies utilised within this project.
 | Front End | Back End | Libraries |
 | ----------- | ----------- | ----------- |
